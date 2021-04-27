@@ -5,18 +5,18 @@ let strokeWidth = 5;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(100);
+  background(10);
 drawGrid();
   noFill();
 }
 
 function draw() {
-background(220,50,133,5);
+background(59,255,20,1);
 strokeWeight(strokeWidth);
 noiseOffset += 0.10;
 strokeWidth = noise(noiseOffset) * 123;
 
-  stroke(map(mouseX,0,234,0,255,true))
+  stroke(map(mouseX,200,234,255,true))
   line(width - mouseX, height - mouseY, width -pmouseX, height - pmouseY);
 line(mouseX, mouseY, pmouseX,pmouseY);
 
@@ -36,10 +36,10 @@ return false;
 
 function mousePressed(){
 array =[];
-backgroundColor = 255;
+backgroundColor = 100;
 }
 function drawGrid(){
-  numCells = 20;
+  numCells = 10;
 for (i = 0; i <= width; i += width / numCells){
 for (let j =0;j <= height; j += height / numCells){
   rect(i,j,width / numCells, height / numCells);
